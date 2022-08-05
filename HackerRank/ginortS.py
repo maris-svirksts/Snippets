@@ -1,3 +1,7 @@
+#!python
+
+# https://www.hackerrank.com/challenges/ginorts/problem
+
 unsorted_string = input()
 
 lower_case = []
