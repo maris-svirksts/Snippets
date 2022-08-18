@@ -17,5 +17,6 @@ for _ in range(n):
 
 rotated_list = list(zip(*matrix))
 merged_list  = ''.join(str(item) for innerlist in rotated_list for item in innerlist)
-result       = re.sub(r"[^\d\w]+(?=[\d\w])", " ", merged_list)
+result       = re.sub(r"(?<=[\d\w])[^\d\w]+(?=[\d\w])", " ", merged_list)
+
 print(result)
