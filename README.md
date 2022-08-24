@@ -1,3 +1,3 @@
-# PythonSnippets
+# Snippets
  
-Various Python Snippets that I have created.
+Various code snippets that I have created.
