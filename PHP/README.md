@@ -1,0 +1,2 @@
+# PHPSnippets
+Various code snippets. 
