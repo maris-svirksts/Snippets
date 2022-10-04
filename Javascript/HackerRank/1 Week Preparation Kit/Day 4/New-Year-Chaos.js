@@ -24,34 +24,25 @@ function readLine() {
  * Complete the 'minimumBribes' function below.
  *
  * The function accepts INTEGER_ARRAY q as parameter.
- * 
- * NOTE: current solution needs to be optimized to complete all test cases.
  */
 
 function minimumBribes(arr) {
-    let n       = arr.length - 1;
-    let counter = 0;
+    let bribes = 0;
+    let expected = [1, 2, 3];
 
-    let sorted = arr.slice().sort(function(a, b) { return a - b; });
-    
-    for (let i = 0; i <= n; i++) {
-        for (let j = 0; j < n - i; j++) {
-            if(arr[j] - j - 1 > 2) {
-                console.log('Too chaotic');
-                return;
-            } else if( sorted != arr ) {
-                if (arr[j] > arr[j + 1]) {
-                    let temp   = arr[j];
-                    arr[j]     = arr[j + 1];
-                    arr[j + 1] = temp;
+    for (const element of arr) {
+        if( expected.includes(element) ) {
+            bribes += expected.indexOf(element);
 
-                    counter++;
-                }
-            }
+            expected.push(expected.slice(-1).pop() + 1);
+            expected.splice(expected.indexOf(element), 1);
+        } else {
+            console.log('Too chaotic');
+            return;
         }
     }
-
-    console.log(counter);
+    
+    console.log(bribes);
 }
 
 function main() {
