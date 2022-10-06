@@ -1,3 +1,5 @@
+// https://www.hackerrank.com/interview/preparation-kits/one-week-preparation-kit/one-week-day-two/challenges
+
 'use strict';
 
 const fs = require('fs');
